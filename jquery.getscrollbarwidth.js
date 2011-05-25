@@ -12,9 +12,9 @@
 		if ( !scrollbarWidth ) {
 			if ( $.browser.msie ) {
 				var $textarea1 = $('<textarea cols="10" rows="2"></textarea>')
-						.css({ position: 'absolute', top: -1000, left: -1000 }).appendTo('body'),
+						.css({ position: 'absolute', top: -1000, left: -1000, width: 'auto' }).appendTo('body'),
 					$textarea2 = $('<textarea cols="10" rows="2" style="overflow: hidden;"></textarea>')
-						.css({ position: 'absolute', top: -1000, left: -1000 }).appendTo('body');
+						.css({ position: 'absolute', top: -1000, left: -1000, width: 'auto' }).appendTo('body');
 				scrollbarWidth = $textarea1.width() - $textarea2.width();
 				$textarea1.add($textarea2).remove();
 			} else {
